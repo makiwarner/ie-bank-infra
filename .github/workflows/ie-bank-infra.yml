@@ -1,14 +1,21 @@
 name: ie-bank-infra
 
+#for testing out in dev branch
 on:
   workflow_dispatch:
   push:
-      paths:
-        - '!scripts/**'
+    branches:
+      - dev
+#apply when using main branch
+# on:
+#   workflow_dispatch:
+#   push:
+#       paths:
+#         - '!scripts/**'
 
 env:
-  RESOURCE_GROUP_DEV: BCSAI2024-DEVOPS-PROFESSORS
-  SUBSCRIPTION_ID_DEV: e0b9cada-61bc-4b5a-bd7a-52c606726b3b
+  RESOURCE_GROUP_DEV: BCSAI2024-DEVOPS-STUDENTS-B-UAT
+  SUBSCRIPTION_ID_DEV:  e0b9cada-61bc-4b5a-bd7a-52c606726b3b
   USER_ALIAS: makiwarner
 
 jobs:
@@ -24,7 +31,8 @@ jobs:
       run: az bicep build --file ./main.bicep
 
   deploy-dev:
-#   if: github.ref == 'refs/heads/dev'
+    #comment the next line for non dev
+    if: github.ref == 'refs/heads/dev' 
     runs-on: ubuntu-latest
     needs: build
     environment:
