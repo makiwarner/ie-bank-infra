@@ -3,22 +3,22 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "environmentType": {
-            "value": "nonprod"
+            "value": "prod"
         },
         "postgreSQLServerName": {
-            "value": "makiwarner-dbsrv-dev"
+            "value": "makiwarner-dbsrv-uat"
         },
         "postgreSQLDatabaseName": {
-            "value": "makiwarner-db-dev"
+            "value": "makiwarner-db-uat"
         },
         "appServicePlanName": {
-            "value": "makiwarner-asp-dev"
+            "value": "makiwarner-asp-uat"
         },
         "appServiceAPIAppName": {
-            "value": "makiwarner-be-dev"
+            "value": "makiwarner-be-uat"
         },
         "appServiceAppName": {
-            "value": "makiwarner-fe-dev"
+            "value": "makiwarner-fe-uat"
         },
         "location": {
             "value": "North Europe"
