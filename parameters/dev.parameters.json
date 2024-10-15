@@ -9,16 +9,16 @@
             "value": "makiwarner2-dbsrv-dev"
         },
         "postgreSQLDatabaseName": {
-            "value": "makiwarner-db-dev"
+            "value": "makiwarner2-db-dev"
         },
         "appServicePlanName": {
-            "value": "makiwarner-asp-dev"
+            "value": "makiwarner2-asp-dev"
         },
         "appServiceAPIAppName": {
-            "value": "makiwarner-be-dev"
+            "value": "makiwarner2-be-dev"
         },
         "appServiceAppName": {
-            "value": "makiwarner-fe-dev"
+            "value": "makiwarner2-fe-dev"
         },
         "location": {
             "value": "North Europe"
