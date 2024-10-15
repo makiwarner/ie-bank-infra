@@ -6,10 +6,10 @@
             "value": "nonprod"
         },
         "postgreSQLServerName": {
-            "value": "makiwarner-dbsrv-dev"
+            "value": "makiwarner2-dbsrv-dev"
         },
         "postgreSQLDatabaseName": {
-            "value": "makiwarner2-db-dev"
+            "value": "makiwarner-db-dev"
         },
         "appServicePlanName": {
             "value": "makiwarner-asp-dev"
