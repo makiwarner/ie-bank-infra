@@ -9,7 +9,7 @@
             "value": "makiwarner-dbsrv-dev"
         },
         "postgreSQLDatabaseName": {
-            "value": "makiwarner-db-dev"
+            "value": "makiwarner2-db-dev"
         },
         "appServicePlanName": {
             "value": "makiwarner-asp-dev"
