@@ -4,6 +4,10 @@
   'prod'
 ])
 param environmentType string = 'nonprod'
+@sys.description('The user alias to add to the deployment name')
+param userAlias string = 'makenna'
+@description('The name of the Azure Container Registry')
+param containerRegistryName string = 'makiwarner-acr-dev'
 @sys.description('The PostgreSQL Server name')
 @minLength(3)
 @maxLength(24)
@@ -86,7 +90,7 @@ resource postgresSQLDatabase 'Microsoft.DBforPostgreSQL/flexibleServers/database
 }
 
 module appService 'modules/app-service.bicep' = {
-  name: 'appService'
+  name: 'appService-${userAlias}'
   params: {
     location: location
     environmentType: environmentType
@@ -103,7 +107,16 @@ module appService 'modules/app-service.bicep' = {
   }
   dependsOn: [
     postgresSQLDatabase
+    acr //appService depends on the ACR
   ]
+}
+
+module acr 'modules/acr.bicep' = {
+  name: 'acr-${userAlias}'
+  params: {
+    name: containerRegistryName
+    location: location
+  }
 }
 
 output appServiceAppHostName string = appService.outputs.appServiceAppHostName
