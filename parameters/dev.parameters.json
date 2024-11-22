@@ -2,23 +2,26 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
+        "name": {
+            "value": "makiwarner-acr-dev"
+        },
         "environmentType": {
             "value": "nonprod"
         },
         "postgreSQLServerName": {
-            "value": "makiwarner2-dbsrv-dev"
+            "value": "makiwarner-dbsrv-dev"
         },
         "postgreSQLDatabaseName": {
-            "value": "makiwarner2-db-dev"
+            "value": "makiwarner-db-dev"
         },
         "appServicePlanName": {
-            "value": "makiwarner2-asp-dev"
+            "value": "makiwarner-asp-dev"
         },
         "appServiceAPIAppName": {
-            "value": "makiwarner2-be-dev"
+            "value": "makiwarner-be-dev"
         },
         "appServiceAppName": {
-            "value": "makiwarner2-fe-dev"
+            "value": "makiwarner-fe-dev"
         },
         "location": {
             "value": "North Europe"
